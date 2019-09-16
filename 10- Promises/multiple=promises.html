@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multiple Promises</title>
+</head>
+<body>
+    <script>
+            const weather = new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve({ temp : 29, conditions: 'Sunny day and Cloudy' })
+                }, 2000)
+            });
+
+            const instagram = new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve(['I will take care', 'BBQ is awesome'])
+                }, 500)
+            });
+
+
+            Promise
+            .all([weather, instagram])
+            .then(responses => {
+                const [weatherInfo, instagramInfo] = responses;
+                console.log(weatherInfo, instagramInfo)
+               
+            });
+    
+        
+    </script>
+</body>
+</html>

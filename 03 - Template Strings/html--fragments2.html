@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Fragments 2</title>
+</head>
+<body>
+    <div class='scam'>
+         
+    </div>
+    <script>
+    
+    const Data = {
+        friend: 'Day Dream',
+        grade: 12,
+        info: 'Bio data and stripe'
+    }
+
+    const output = `
+    <div class="friend">
+    <h1 class="data">
+    ${Data.friend}
+    </h1>
+    <p class="grade">${Data.grade}</p>
+    <p class="info">${Data.info}</p>
+    </div>   
+    `;
+
+    const insert = document.querySelector('.scam')
+    const created = document.createElement('p');
+
+    created.innerHTML = output;
+    insert.appendChild(created)
+
+    console.log(insert)
+    </script>
+</body>
+</html>

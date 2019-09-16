@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML fragments</title>
+</head>
+<body>
+    <script>
+        const persons = {
+            name: 'Ernie',
+            job: 'Web Developer',
+            city: 'Bacolod',
+            bio: 'Ernie is really a cool guy love on development'
+            
+        }
+
+        const marks = `
+        <div class='person'>
+            <h2> ${persons.name}</h2>
+            <p class="location">${persons.city}</p>
+            <p class="bio">${persons.bio}</p>
+        
+        </div>
+        `
+    
+    document.body.innerHTML = marks;
+    </script>
+</body>
+</html>

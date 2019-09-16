@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Default function</title>
+</head>
+<body>
+    <script>
+        function calculateBill(total,tax,tip){
+            return total + (total * tax) + (total * tip)
+        }
+
+        const totalBill = calculateBill(100, 0.13, 0.15)
+        console.log(totalBill)
+
+
+        function testBill(total,tax,tip){
+           if(tax === undefined){
+               tax = 0.13
+           }
+           if(tip === undefined){
+                tip = 0.15;
+           }
+            return total + (total* tax) + (total + tip);
+        }
+
+        const testTotalBill= testBill(100);
+        console.log(testTotalBill);
+
+        function testBill1(total, tax, tip){
+            tax = tax || 0.13;
+            tip = tip || 0.15;
+            return total + (total * tax) + (total * tip);
+        }
+
+        const testToBill1 = testBill1(100);
+        console.log(testToBill1);
+
+        function methodMe(total, tax = 0.13, tip = 0.15){
+            return total + (total * tax) + (total * tip);
+        }
+
+        const sugoeBill = methodMe(100);
+        console.log(sugoeBill);
+
+        function anotherMethod(total, tax = 0.13, tip = 0.15){
+            return total + (total + tax) + (total + tip);
+        }
+
+        const anotherMethodEquals = anotherMethod(100, 0.25);
+        console.log(anotherMethodEquals)
+
+        function callsMe(total, tax = 0.13, tip = 0.15){
+            return total + (total + tax) + (total + tip);
+        }
+        const callsMeEquals= callsMe(100, undefined, 0.25);
+        console.log(callsMeEquals);
+    </script>
+</body>
+</html>

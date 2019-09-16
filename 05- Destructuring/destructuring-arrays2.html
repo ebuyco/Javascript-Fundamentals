@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Destructuring-arrays2</title>
+</head>
+<body>
+    <script>
+        const details = ['Wes Bos' , 124, 'wesbos.com'];
+        const [name, id, website] = details;
+
+        console.log(name, id ,website)
+    
+    const data ='Basketball,Sports,291010,222,wes,bos,cool';
+
+    const [itemName, category, sku, inventory] = data.split(',');
+    
+
+    const team = ['Ernie', 'Ceasar', 'John', 'Test'];
+
+    const [captain, assistant, ...players] = team;
+
+    console.log(team)
+    console.log(captain, assistant, ...players)
+    
+    </script>
+</body>
+</html>

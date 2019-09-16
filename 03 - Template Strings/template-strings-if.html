@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template strings using if statement</title>
+</head>
+<body>
+    <script>
+       const bring = {
+           name: 'Data must persist',
+           date: 'Wher i can buy this shit!!!',
+           well: 'Sometimes i can make things possible'
+       }
+
+       const sometimes = `
+           <div class='heroine'>
+            ${bring.name} - ${bring.date}
+            ${bring.well ? `(That thing called data from ${bring.well})` : ''}
+           </div> 
+       `;
+
+       document.body.innerHTML = sometimes;
+    </script>
+</body>
+</html>

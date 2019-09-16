@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array flatmap</title>
+</head>
+<body>
+    <script>
+            const jolibee = [
+                {
+                    name: 'Jolly',
+                    menu: 'Water'
+                },
+                {
+                    name: 'Burger',
+                    menu: 'Stripe'
+                }
+            ];
+            
+            
+        const flatters = `
+        <ul>
+        ${jolibee.flatMap(flat => `<li>${flat.name} and ${flat.menu}</li>`).join('')}
+        </ul>
+        `;
+
+
+
+        console.log(flatters)
+
+        const stranger = [
+            {
+            name: 'Scott',
+            age: 29
+            },
+            {
+                name: 'Sprite',
+                age: 89
+            }
+    ];
+
+    const marks = `
+    <ul>
+        ${stranger.map(strive => `<li>${strive.name} and number ${strive.age}</li>`).join('') }
+    </ul>    
+    
+    `;
+        console.log(marks)
+        </script>      
+</body>
+</html>

@@ -1,0 +1,5 @@
+div {
+    display: flex;
+    flex: shrink;
+    flex-direction: row;
+}

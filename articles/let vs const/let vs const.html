@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Let vs Const</title>
+</head>
+<body>
+    <script>
+    
+    // const key = 'abcd123';
+    // let points = 50 ;
+    // let winner = false;
+
+    // let points = 60;
+
+    // const key = 'abn123';
+    // let points = 50;
+    // let winner = false;
+
+    // if (points > 40){
+    //     let winner = true;
+    // }
+
+    // console.log(winner)
+
+    // const key = 'abvv123';
+    // let points = 50;
+    // let winner =false;
+
+    // points = 60;
+
+    // console.log(points);
+
+    // const key = 'abnn123';
+    // let points = 50;
+    // let winner =false;
+
+    // key = assss;
+    // console.log(key);
+
+    // const person = {
+    //     name: 'Ernie',
+    //     age: 28
+    // }
+    // console.log(person)
+
+    // const person = {
+    //     name: 'Ernie',
+    //     age: 28
+    // }
+
+    // person.age = 29;
+
+    // console.log(person.age);
+
+    const person = {
+        name: 'Ernie',
+        age: 28
+    }
+
+    // person.age = 12
+
+    const ernie = Object.freeze(person);
+    ernie.age = 21;
+    console.log(ernie)
+    </script>
+</body>
+</html>

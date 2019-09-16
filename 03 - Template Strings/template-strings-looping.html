@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template Strings Looping</title>
+</head>
+<body>
+    <script>
+        const schema = [
+            {
+                name: 'Honesto',
+                age: 18
+            },
+            {
+                name: 'Scott',
+                age: 21
+            },
+            {
+                name: 'Wes',
+                age: 11
+            }
+        ];
+
+        const tail = `
+        ${schema.map(scratch => `<li>Hi this is a test of ${scratch.name} and test of age of ${scratch.age}</li>`).join('')}
+        `;
+
+        document.body.innerHTML = tail;
+    </script>
+</body>
+</html>

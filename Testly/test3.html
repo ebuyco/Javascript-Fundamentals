@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Click Handler</title>
+
+    <style>
+    
+    #btn {
+        border-radius: 2rem;
+        border-color: 1rem;
+        background-color: transparent;
+        color: #000000;
+        font-size: 1em;
+    }
+    </style>
+</head>
+<body>
+        <button id='btn'>Hello</button>
+    <script>
+           const button = document.querySelectorAll('#btn');
+         
+           // const markup = `
+            // <button id='btn'>Hello</button>
+            //`; 
+          
+            function setup(e){
+            //    this.classList.toggle('open');
+               if(e){
+                this.classList.toggle('open');
+               }else{
+                   this.classList.remove('open')
+               }
+            }
+        
+        button.forEach(checkbox => checkbox.addEventListener('click', setup));
+
+
+    </script>
+</body>
+   
+</html>

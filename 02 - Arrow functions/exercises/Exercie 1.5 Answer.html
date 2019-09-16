@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise 1 answer</title>
+</head>
+<body>
+    <ul>
+        <li data-time="5:17">Flexbox Video</li>
+        <li data-time="8:22">Flexbox Video </li>
+        <li data-time="3:34">Flexbox Video</li>
+        <li data-time="5:23">Flexbox Video</li>
+        <li data-time="7:12">Flexbox Video</li>
+        <li data-time="7:24">Flexbox Video</li>
+        <li data-time="6:46">Flexbox Video </li>
+        <li data-time="4:45">Flexbox Video</li>
+        <li data-time="4:40">Flexbox Video</li>
+        <li data-time="7:58">Flexbox Video</li>
+        <li data-time="11:51">Flexbox Video</li>
+        <li data-time="9:13">Flexbox Video </li>
+        <li data-time="5:50">Flexbox Video</li>
+        <li data-time="5:52">Flexbox Video</li>
+        <li data-time="5:49">Flexbox Video</li>
+        <li data-time="8:57">Flexbox Video</li>
+        <li data-time="11:29">Flexbox Video </li>
+        <li data-time="3:07">Flexbox Video</li>
+        <li data-time="5:59">Flexbox Video</li>
+        <li data-time="3:31">Flexbox Video</li>
+    </ul>
+    <script>
+        
+    // Select all the list items on the page and convert to array
+        const items = Array.from(document.querySelectorAll('[data-time]'));
+
+     // Filter for only the elements that contain the word 'Flexbox'
+      const filtered = items 
+      .filter(item => item.textContent.includes('Flexbox')) 
+     // map down to a list of item strings   
+      .map(item => item.dataset.time)  
+     //map to an array of seconds
+      .map(item => {
+          const parts = timecode.split(':').map(part => parseFloat(part));
+          return (parts[0] * 60 + parts[1]);
+      })  
+     //reduce to get total
+     .reduce((runningTotal, seconds) => runningTotal + seconds );
+
+     // 🔥 This can also be done in a single .reduce(), but we're practicing arrow functions here, so chain them!   
+     console.log(filtered);
+    </script>
+</body>
+</html>

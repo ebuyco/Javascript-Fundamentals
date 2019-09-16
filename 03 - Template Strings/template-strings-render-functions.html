@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template Strings with render functions</title>
+</head>
+<body>
+    <script>
+        const beer = {
+            name: 'String goes Here',
+            description: 'Fuck that shit !!!',
+            words: ['puta', 'linte', 'suta']
+        };
+
+        function shitthatName(words){
+            return `
+            <ul>${words.map(word => `<li>${word}</li>`).join('')}</ul>
+            `
+        };
+
+        const output = `
+             <div>
+                <h2>${beer.name}</h2>
+                <h3>${beer.description}</h3>
+                ${shitthatName(beer.words)}
+            </div>
+        `;
+
+        document.body.innerHTML = output;
+
+    </script>
+</body>
+</html>

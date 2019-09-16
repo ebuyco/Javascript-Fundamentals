@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Append</title>
+    <style>
+    .A{
+        background: red;
+        color: #ffffff;
+        width: 100%;
+        height: 2rem;
+    }
+    .B{
+        background: blue;
+        color: #ffffff;
+        width: 100%;
+        height: 2rem;
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="B"></div>
+</body>
+<script>
+    // const B = document.querySelector('.B');
+    // const A = document.createElement('div');
+    // A.classList.add('A');
+    // document.body.appendChild(A);
+    // B.appendChild(A)
+    function copyElement(){
+        const B = document.querySelector('.B');
+        const A = document.createElement('div');
+        A.classList.add('A');
+        document.body.appendChild(A);
+        B.appendChild(A)
+    }
+
+    copyElement();
+   
+</script>
+</html>

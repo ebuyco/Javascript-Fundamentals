@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrow functions > > </title>
+</head>
+<body>
+    <script>
+        const names = ['wes', 'kait', 'lux', 'waits'];
+
+        const fullNames = names.map(function(name){
+            return `${name} bos`;
+        });
+
+        const fullNames2 = names.map(function(name){
+            return `${name} bos`;
+        });
+
+        const fullNames3 = names.map(function(name) {
+            return `${name} bos`;
+        });
+
+        const fullNames4 = names.map(name => `${name} bos`);
+
+        const fullNames5 = names.map(() => `cool boss`);
+
+        const sayMyName = (name) => {
+            alert (`Hello ${name} !`);
+        }
+        console.log(fullNames3);
+
+        sayMyName('Ernie');
+
+        class User {
+            constructor(email, name){
+                this.email = email;
+                this.name = name;
+                this.score = 0;
+            
+            }
+
+            login(){
+                    console.log(this.email, `just logge in`);
+                    return this;
+                }
+                logout(){
+                    console.log(this.email, `just logge out`);
+                    return this;
+                }
+
+                updateScore(){
+                    this.score++;
+                    console.log(this.email, `score is now`, this.score);
+                    return this;
+                }
+        }
+
+        class Admin extends User {
+               deleteUser(user){
+                   users = users.filter(u => {
+                       return u.email != user.email;
+                   })
+               }     
+        }
+
+        let userOne = new User('test1.com', 'Test');
+        let userTwo = new User('test2@gmail.com', 'Test2');
+        let admin = new Admin('test3@gmail.com', 'Test3');
+
+        const users = [userOne, userTwo, admin];
+
+        userOne.deleteUser= [userTwo];
+    </script>
+</body>
+</html>
