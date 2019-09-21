@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scrolling Effect</title>
+
+    <style>
+    
+    
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <nav class='nav-scroll'>
+                <ul>
+                    <li>
+                        1
+                    </li>
+                    <li>
+                        2
+                    </li>
+                </ul>
+        </nav>
+    </div>
+    <div>
+        <div class="content">
+            <h2>1</h2>
+            <h2>2</h2>
+            <h2>3</h2>
+            <h2>4</h2>
+            <h2>5</h2>
+            <h2>6</h2>
+            <h2>7</h2>
+            <h2>8</h2>
+            <h2>9</h2>
+            <h2>20</h2>
+        </div>
+        <div class="content">
+                <h2>1</h2>
+                <h2>2</h2>
+                <h2>3</h2>
+                <h2>4</h2>
+                <h2>5</h2>
+                <h2>6</h2>
+                <h2>7</h2>
+                <h2>8</h2>
+                <h2>9</h2>
+                <h2>20</h2>
+            </div>
+    </div>
+    <script>
+// window.onscroll = function() {
+//   var currentScrollPos = window.pageYOffset;
+
+//   // 20 is an arbitrary number here, just to make you think if you need the prevScrollpos variable:
+//   if (currentScrollPos > 20) {
+//     // I am using 'display' instead of 'top':
+//     document.getElementById("nav-scroll").style.display = "none";
+//   } else {
+//     document.getElementById("nav-scroll").style.display = "initial";
+//   }
+// }
+
+        const navigation = document.querySelector('.nav-scroll');
+        const position = navigation.offsetTop;
+        function slickNav(){
+            if(window.scrollY >= position){
+                navigation.classList.add('top');
+            }else{
+                navigation.classList.remove('top')
+            }
+        }
+
+        window.addEventListener('scroll', slickNav)
+        
+    </script>
+</body>
+</html>
