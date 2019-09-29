@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Traversing</title>
+</head>
+<body>
+    <div class="data">
+            Data Test
+    </div>
+    <script>
+            const data = document.querySelector('data');
+            const input = document.createElement('p');
+
+            input.textContent = 'This content will be removed';
+            document.body.appendChild(input)
+
+            input.remove();
+
+            console.log(input);
+            document.body.appendChild(input)
+
+    </script>
+</body>
+</html>
