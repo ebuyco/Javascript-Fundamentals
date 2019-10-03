@@ -15,9 +15,37 @@
     const datas = [['data1', 'data2'], ['data3', 'data4']];
     const dataFlats = datas.flat();
     // same as : const dataFlats = datas.Flat(1);
-
     console.log(dataFlats);
+    //output: ["data1", "data2", "data3", "data4"]
     
+    //You can use Infinity if you want to flatten an array of arbitrary depth
+    const database = [['db1', 'db2'], ['db3', 'db4', ['db5', ['db6'], 'db7']]];
+    const flatDatabase = database.flat(Infinity);
+    console.log(flatDatabase)
+    //output: ["data1", "data2", "data3", "data4", "data5", "data6", "data7"]    
+
+     //The flatMap() method available on the Array prototype has the same effect 
+     //as using map() method followed by the flat() method with default depth of 1 
+        const works = ['work1', 'work2', 'work3', 'work4'];
+        const details = ['detail1', 'detail2', 'detail3', 'detail4'];
+
+        const mappedOnly = works.map((work, index) => [work, details[index]]);
+        const mappedAndFlatten = works.flatMap((work,index) => [work, details[index]]);
+
+        console.log(mappedOnly);
+        //output: 0: ["work1", "detail1"] 1 ["work2", "detail2"] ["work3", "detail3"] ["work4", "detail4"]
+
+        console.log(mappedAndFlatten);
+        //output: ["work1", "detail1", "work2", "detail2", "work3", "detail3", "work4", "detail4"] 
+        // 0: "work1"
+        // 1: "detail1"   
+        // 2: "work2"
+        // 3: "detail2"
+        // 4: "work3"
+        // 5: "detail3"
+        // 6: "work4"
+        // 7: "detail4"
+
     </script>
 </body>
 </html>
