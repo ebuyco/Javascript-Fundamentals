@@ -8,10 +8,14 @@
 </head>
 <body>
     <script>
-    // There are two new Array methods:
-    // The Array.flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
-    // The Array.flatMap() method first maps each element using a mapping function, then flattens the result into a new array. It is identical to a map() followed by a flat() of depth 1, but flatMap() is often quite useful, as merging both into one method is slightly more efficient.
-
+    /*cThere are two new Array methods:
+    The Array.flat() method creates a new array with all sub-array elements concatenated 
+    into it recursively up to the specified depth.
+    The Array.flatMap() method first maps each element using a mapping function, 
+    then flattens the result into a new array. It is identical to a map() followed by 
+    a flat() of depth 1, but flatMap() is often quite useful, as merging both into one
+     method is slightly more efficient.
+   */
     const datas = [['data1', 'data2'], ['data3', 'data4']];
     const dataFlats = datas.flat();
     // same as : const dataFlats = datas.Flat(1);
@@ -24,8 +28,8 @@
     console.log(flatDatabase)
     //output: ["data1", "data2", "data3", "data4", "data5", "data6", "data7"]    
 
-     //The flatMap() method available on the Array prototype has the same effect 
-     //as using map() method followed by the flat() method with default depth of 1 
+     /*The flatMap() method available on the Array prototype has the same effect 
+     as using map() method followed by the flat() method with default depth of 1 */
         const works = ['work1', 'work2', 'work3', 'work4'];
         const details = ['detail1', 'detail2', 'detail3', 'detail4'];
 
@@ -36,15 +40,16 @@
         //output: 0: ["work1", "detail1"] 1 ["work2", "detail2"] ["work3", "detail3"] ["work4", "detail4"]
 
         console.log(mappedAndFlatten);
-        //output: ["work1", "detail1", "work2", "detail2", "work3", "detail3", "work4", "detail4"] 
-        // 0: "work1"
-        // 1: "detail1"   
-        // 2: "work2"
-        // 3: "detail2"
-        // 4: "work3"
-        // 5: "detail3"
-        // 6: "work4"
-        // 7: "detail4"
+        /* output: ["work1", "detail1", "work2", "detail2", "work3", "detail3", "work4", "detail4"] 
+            0: "work1"
+            1: "detail1"   
+            2: "work2"
+            3: "detail2"
+            4: "work3"
+            5: "detail3"
+            6: "work4"
+           7: "detail4"
+           */
 
     </script>
 </body>

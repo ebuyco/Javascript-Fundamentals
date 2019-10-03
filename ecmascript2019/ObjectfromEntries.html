@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object from Entries</title>
+</head>
+<body>
+    <script>
+    
+    /* Object.fromEntries()
+    Transform a list of key and value pairs into an object. */
+    const vegetables = { talong: 'violet', okra: 'green', kamatis: 'red'};
+    const entries = Object.entries(vegetables);
+    const fromEntries = Object.fromEntries(entries);
+
+    console.log(fromEntries);
+        /*output: 
+        (3) [Array(2), Array(2), Array(2)]
+        0: (2) ["talong", 'violet']
+        1: (2) ["okra", 'green']
+        3: (2) ["kamatis", 'red']
+
+        {talong: "violet", okra: "green", kamatis: "red"}
+        */
+    </script>
+</body>
+</html>
