@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Flat / Array Flatmap</title>
+</head>
+<body>
+    <script>
+    // There are two new Array methods:
+    // The Array.flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+    // The Array.flatMap() method first maps each element using a mapping function, then flattens the result into a new array. It is identical to a map() followed by a flat() of depth 1, but flatMap() is often quite useful, as merging both into one method is slightly more efficient.
+
+    const datas = [['data1', 'data2'], ['data3', 'data4']];
+    const dataFlats = datas.flat();
+    // same as : const dataFlats = datas.Flat(1);
+
+    console.log(dataFlats);
+    
+    </script>
+</body>
+</html>
