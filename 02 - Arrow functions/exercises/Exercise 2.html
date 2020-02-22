@@ -10,12 +10,15 @@
     <script>
       // 1. Given this array: `[3,62,234,7,23,74,23,76,92]`,
     //    use the array filter method and an arrow function to create an array of the numbers greater than `70`
-       const numbersOutput = [ 71, 23333, 12555,909121212, 1222, 2, 3, 9, 10, 11, 18, 45];
+       const numbers = [3,4,70,2000,20,12,2,5900,90];
+       const select = numbers.filter(letter => letter > 70);
+       
+       const output = `
+       <h1>${select}</h1>
+       `;
 
-       const selfTimer = numbersOutput.filter(numb => numb > 100);
-
-       console.log(selfTimer);
-    
-    </script>
+      document.body.innerHTML = output;
+      console.log(select);       
+   </script>
 </body>
 </html>

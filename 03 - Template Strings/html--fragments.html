@@ -24,8 +24,25 @@
         
         </div>
         `
+
+        const people = {
+              work: 'Web Developer',
+              firstName: 'Joe',
+              lastName: 'Wills',
+              location: 'Bacolod City',
+              bio: 'Im a developer '  
+        }
+
+        const output = `
+            <div class='people'>
+                <h1> ${people.work}</h1>
+                <p class="work">${people.work}</work>
+             </div>    
+
+
+        `;
     
-    document.body.innerHTML = marks;
+    document.body.innerHTML = [marks, output];
     </script>
 </body>
 </html>

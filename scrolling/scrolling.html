@@ -65,6 +65,7 @@
 
         const navigation = document.querySelector('.nav-scroll');
         const position = navigation.offsetTop;
+        
         function slickNav(){
             if(window.scrollY >= position){
                 navigation.classList.add('top');
@@ -73,7 +74,8 @@
             }
         }
 
-        window.addEventListener('scroll', slickNav)
+      
+        window.addEventListener('scroll', slickNav);
         
     </script>
 </body>

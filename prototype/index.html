@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prototype</title>
+</head>
+<body>
+    
+    <script>
+   
+   class Car {
+       constructor(make, colour){
+           this.make = make;
+           this.colour = colour;
+       }
+   }
+
+   const beemer = new Car('BMW', 'blue');
+   const subie = new Car('Subaru', 'white');
+
+   Car.prototype.summarize = () => {
+       return`This is a ${this.make} in the colour ${this.colour}`;
+   }
+
+ 
+
+    </script>
+</body>
+</html>
