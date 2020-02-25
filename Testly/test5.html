@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stars</title>
+</head>
+<body>
+
+    <div id="rating">
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+    </div>
+
+    <script>
+        const rating = document.querySelectorAll('span');
+
+        function clickHandler(e){
+            if(e){
+                this.classList.toggle('active');
+               }else{
+                   this.classList.remove('active')
+               }
+
+
+        }
+        rating.forEach(checkbox => checkbox.addEventListener('click', clickHandler));
+
+    </script>
+</body>
+</html>

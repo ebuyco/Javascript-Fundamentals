@@ -60,7 +60,8 @@
             <h5>6. Given a list of 1000 elements, which of the following numbers is the largest?</h5>
             <p>
                 A. The number of all possible subsets of a given list
-                B. The number of all possible pairs of elements from a given list C) The number of all possible permutations of a given list
+                B. The number of all possible pairs of elements from a given list 
+                C. The number of all possible permutations of a given list
                 D. 10,000,000,000,000,000
             </p>
             <bold>Answer: </bold>
@@ -74,21 +75,41 @@
             </p>
             <bold></bold>
 
-            <h5>8. </h5>
+            <h5>8. Which of the following statements is correct (choosing one answer means that single answer is correct):
+                def f(A):
+                for i := 0; i < A.length - 1; i++ do:
+                if (A[i] > A[i + 1]):
+                swap A[i] with A[i+1]
+                return A
+                </h5>
             <p>
-                
+                A. There is an element that can be removed so that f(A_without_one_element) returns a sorted array.
+                B. For any array A of size N, f(A)[N - 1] = max(A).
+                C. For any array A of size N, f(A)[0] = min(A).
+                D. More than one answer is correct.
             </p>
             <bold>Answer: </bold>
 
-            <h5>9. </h5>
+            <h5>9. Which of the following algorithms finds the shortest path in any unweighted graph?</h5>
             <p>
-
+                A. DFS
+                B. BFS
+                C. both 
+                D. neither
             </p>
-            <bold>Answer: </bold>
+            <bold>Answer:B. BFS (explanation: https://www.freecodecamp.org/news/exploring-the-applications-and-limits-of-breadth-first-search-to-the-shortest-paths-in-a-weighted-1e7b28b3307/, https://www.google.com/search?q=Which+of+the+following+algorithms+finds+the+shortest+path+in+any+unweighted+graph%3F+A)+DFS+B)+BFS+C)+both+D)+neither&rlz=1C5CHFA_enPH866PH866&oq=Which+of+the+following+algorithms+finds+the+shortest+path+in+any+unweighted+graph%3F+A)+DFS+B)+BFS+C)+both+D)+neither&aqs=chrome..69i57.506j0j7&sourceid=chrome&ie=UTF-8) </bold>
 
-            <h5>10. </h5>
+            <h5>10. The time complexity of g(n, x, y) is O(n). What is the time complexity of f(n)?
+                def f(n):
+                if n == 1:
+                return 1 x = f(n/2) y = f(n/2)
+                return g(n, x, y)
+            </h5>
             <p>
-
+                A. O(log n)
+                B. O(n)
+                C. O(n * log n) 
+                D. O(n*n)
             </p>
             <bold>Answer: </bold>
     </body>
